@@ -1,6 +1,6 @@
 // ===== ССЫЛКА НА СОЦСЕТЬ =====
 // Вставь свою ссылку между кавычками, например "https://t.me/твой_ник"
-const MOY_KONTAKT = "https://t.me/adelinka_n";
+const MOY_KONTAKT = "https://t.me/Adelinka_g";
 // =============================
 
 (function () {
