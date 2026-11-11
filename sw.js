@@ -1,4 +1,4 @@
-const VERSION = "v1";
+const VERSION = "v2";
 const CACHE = "kto-ya-" + VERSION;
 const FILES = [
   "./",
@@ -11,6 +11,9 @@ const FILES = [
   "img/3-raskladka.jpg",
   "img/4-moher.jpg",
   "img/5-vecher.jpg",
+  "img/sanya-1-mesto.jpg",
+  "img/sanya-2-eda.jpg",
+  "img/sanya-3-frazy.jpg",
 ];
 
 self.addEventListener("install", (e) => {
