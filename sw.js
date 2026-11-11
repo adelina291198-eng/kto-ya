@@ -1,4 +1,4 @@
-const VERSION = "v2";
+const VERSION = "v3";
 const CACHE = "kto-ya-" + VERSION;
 const FILES = [
   "./",
@@ -17,7 +17,9 @@ const FILES = [
 ];
 
 self.addEventListener("install", (e) => {
-  e.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)));
+  e.waitUntil(caches.open(CACHE).then((c) =>
+    c.addAll(FILES.map((f) => new Request(f, { cache: "reload" })))
+  ));
   self.skipWaiting();
 });
 
@@ -33,8 +35,9 @@ self.addEventListener("activate", (e) => {
 // Сначала интернет (свежая версия), без интернета — сохранённая копия
 self.addEventListener("fetch", (e) => {
   if (e.request.method !== "GET") return;
+  if (new URL(e.request.url).origin !== location.origin) return;
   e.respondWith(
-    fetch(e.request)
+    fetch(e.request.url, { cache: "no-cache" })
       .then((r) => {
         const copy = r.clone();
         caches.open(CACHE).then((c) => c.put(e.request, copy));
