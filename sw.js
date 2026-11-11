@@ -1,4 +1,4 @@
-const VERSION = "v3";
+const VERSION = "v4";
 const CACHE = "kto-ya-" + VERSION;
 const FILES = [
   "./",
