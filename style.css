@@ -146,6 +146,10 @@ h1 { font-size: clamp(48px, 8vw, 88px); margin-bottom: 22px; }
 .contact { background: var(--bordo); color: var(--cream); padding: 72px 0; text-align: center; }
 .contact h2 { margin-bottom: 12px; }
 .contact p { margin: 0 auto; max-width: 30em; }
+.contact-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.btn-ghost { background: transparent; color: var(--cream); border: 1.5px solid rgba(243, 235, 224, .7); }
+.btn-ghost:hover { background: rgba(243, 235, 224, .12); }
+.handles { margin-top: 16px !important; font-size: 14px; color: #F0D9D2; }
 .hint { margin-top: 16px !important; font-size: 15px; color: #F0D9D2; }
 
 .foot { padding-top: 24px; padding-bottom: 32px; text-align: center; font-size: 14px; color: var(--choco-soft); }
@@ -186,4 +190,5 @@ h1 { font-size: clamp(48px, 8vw, 88px); margin-bottom: 22px; }
   .phones, .gallery { scrollbar-width: none; }
   .phones::-webkit-scrollbar, .gallery::-webkit-scrollbar { display: none; }
   .contact { padding: 56px 0; }
+  .contact-btns { flex-direction: column; gap: 0; }
 }
